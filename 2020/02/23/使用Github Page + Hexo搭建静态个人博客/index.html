@@ -7,15 +7,15 @@
   
   <title>使用Github Page + Hexo搭建静态个人博客 | Zorroki的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言​    很多时候你以为你理解了某样东西，但其实并没有。将自己的理解写成文章，就是一个自我检查的过程，当你尝试把一个东西说清楚时，你才知道你实际上对这个东西还有哪些问题。写成博客的形式，不仅可以帮助其他人，简历加分，更重要的是可以让别人指出你没有意识到的错误，从而改进。 大致流程使用Hexo框架将Markdown笔记解析成静态网页，再使用插件将网页push到特定的git仓库，由GitHub P">
+  <meta name="description" content="前言​    很多时候你以为你理解了某样东西，但其实并没有。将自己的理解写成文章，就是一个自我检查的过程，当你尝试把一个东西说清楚时，你才知道你实际上对这个东西还有哪些问题。写成博客的形式，不仅可以帮助其他人，简历加分，更重要的是可以让别人指出你没有意识到的错误，从而改进。 大致流程​    使用Hexo框架将Markdown笔记解析成静态网页，再使用插件将网页push到特定的git仓库，由Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Github Page + Hexo搭建静态个人博客">
 <meta property="og:url" content="http://zorroki.me/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Zorroki的个人博客">
-<meta property="og:description" content="前言​    很多时候你以为你理解了某样东西，但其实并没有。将自己的理解写成文章，就是一个自我检查的过程，当你尝试把一个东西说清楚时，你才知道你实际上对这个东西还有哪些问题。写成博客的形式，不仅可以帮助其他人，简历加分，更重要的是可以让别人指出你没有意识到的错误，从而改进。 大致流程使用Hexo框架将Markdown笔记解析成静态网页，再使用插件将网页push到特定的git仓库，由GitHub P">
+<meta property="og:description" content="前言​    很多时候你以为你理解了某样东西，但其实并没有。将自己的理解写成文章，就是一个自我检查的过程，当你尝试把一个东西说清楚时，你才知道你实际上对这个东西还有哪些问题。写成博客的形式，不仅可以帮助其他人，简历加分，更重要的是可以让别人指出你没有意识到的错误，从而改进。 大致流程​    使用Hexo框架将Markdown笔记解析成静态网页，再使用插件将网页push到特定的git仓库，由Git">
 <meta property="og:locale" content="cn">
 <meta property="article:published_time" content="2020-02-23T08:36:39.410Z">
-<meta property="article:modified_time" content="2020-02-23T08:41:54.014Z">
+<meta property="article:modified_time" content="2020-02-23T08:44:47.861Z">
 <meta property="article:author" content="Zorroki">
 <meta name="twitter:card" content="summary">
   
@@ -89,18 +89,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    很多时候你以为你理解了某样东西，但其实并没有。将自己的理解写成文章，就是一个自我检查的过程，当你尝试把一个东西说清楚时，你才知道你实际上对这个东西还有哪些问题。写成博客的形式，不仅可以帮助其他人，简历加分，更重要的是可以让别人指出你没有意识到的错误，从而改进。</p>
-<h2 id="大致流程"><a href="#大致流程" class="headerlink" title="大致流程"></a>大致流程</h2><p>使用Hexo框架将Markdown笔记解析成静态网页，再使用插件将网页push到特定的git仓库，由GitHub Pages发布网站。</p>
+<h2 id="大致流程"><a href="#大致流程" class="headerlink" title="大致流程"></a>大致流程</h2><p>​    使用Hexo框架将Markdown笔记解析成静态网页，再使用插件将网页push到特定的git仓库，由GitHub Pages发布网站。</p>
 <p>​    Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <p>​    GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 HTML、CSS 和 JavaScript 文件，（可选）通过构建过程运行文件，然后发布网站。</p>
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h3><p>​    新建一个名为 <code>username.github.io</code> 的仓库,例如我GitHub的 <code>username</code>是<code>Zorroki</code>，则仓库名为<code>zorroki.github.io</code></p>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>​    官网链接 <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>​    官网链接 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
-<blockquote>
-<p>注意事项：</p>
-<p>Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本</p>
-<p>使用 Node.js 官方安装程序时，请确保勾选 <strong>Add to PATH</strong> 选项（默认已勾选）（windows用户）</p>
-</blockquote>
-<h3 id="NPM配置淘宝镜像源"><a href="#NPM配置淘宝镜像源" class="headerlink" title="NPM配置淘宝镜像源"></a>NPM配置淘宝镜像源</h3><p>​    由于<code>npm</code>默认下载源在国外，国内下载会很慢，所以需要修改源地址国内镜像，这里使用淘宝镜像,按下快捷键win+r，输入<code>cmd</code>，回车打开<code>cmd</code>。输入</p>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h3><p>​        新建一个名为 <code>username.github.io</code> 的仓库,例如我GitHub的 <code>username</code>是<code>Zorroki</code>，则仓库名为<code>zorroki.github.io</code></p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>​        官网链接 <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>​        官网链接 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
+<p>​        注意事项：</p>
+<p>​            Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本</p>
+<p>​            使用 Node.js 官方安装程序时，请确保勾选 <strong>Add to PATH</strong> 选项（默认已勾选）（windows用户）</p>
+<h3 id="NPM配置淘宝镜像源"><a href="#NPM配置淘宝镜像源" class="headerlink" title="NPM配置淘宝镜像源"></a>NPM配置淘宝镜像源</h3><p>​        由于<code>npm</code>默认下载源在国外，国内下载会很慢，所以需要修改源地址国内镜像，这里使用淘宝镜像,按下快捷键win+r，输入<code>cmd</code>，回车打开<code>cmd</code>。输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
 
 
@@ -109,7 +107,7 @@
 
 
 
-<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>​    新建你要存放网站的文件夹，在当前目录点击地址栏，清空地址后输出<code>cmd</code>回车。输入（不需要括号）</p>
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>​        新建你要存放网站的文件夹，在当前目录点击地址栏，清空地址后输出<code>cmd</code>回车。输入（不需要括号）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;文件夹名&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;文件夹名&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 
@@ -118,34 +116,35 @@
 
 
 
-<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>​    编辑<code>_config.yml</code>文件,拉到底,配置如下</p>
+<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>​        编辑<code>_config.yml</code>文件,拉到底,配置如下</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span> </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;仓库地址&gt;</span> <span class="comment">#git@github.com:Zorroki/zorroki.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">[分支]</span> <span class="comment">#要推送到哪个分支</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[自定义提交信息]</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置<code>ssh key</code></h3><p>​    这篇博客写得很详细 <a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener"><a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">github设置添加SSH</a></a></p>
-<h3 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h3><p>​    在网站文件夹地址栏输入<code>cmd</code>回车，输入</p>
+<h3 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置<code>ssh key</code></h3><p>​        这篇博客写得很详细 <a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener"><a href="https://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">github设置添加SSH</a></a></p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>​        在网站文件夹地址栏输入<code>cmd</code>回车，输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp; hexo g &amp; hexo d</span><br></pre></td></tr></table></figure>
 
-<p>​    作用分别是：</p>
+<p>​        作用分别是：</p>
 <ul>
-<li>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</li>
-<li>生成静态文件。</li>
-<li>部署网站。</li>
+<li><p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
+</li>
+<li><p>生成静态文件。</p>
+</li>
+<li><p>部署网站。</p>
+</li>
 </ul>
 <h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>​    访问 username.github.io 查看效果吧，关于Hexo的详细操作请看官方文档。</p>
 <p>参考资料：</p>
-<blockquote>
 <p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo文档</a></p>
 <p><a href="https://help.github.com/cn/github/working-with-github-pages/about-github-pages" target="_blank" rel="noopener">GitHub Pages文档</a></p>
 <p><a href="http://beiyuu.com/github-pages" target="_blank" rel="noopener">使用Github Pages建独立博客</a></p>
 <p><a href="https://segmentfault.com/a/1190000009363890" target="_blank" rel="noopener">如何在服务器上搭建hexo博客</a></p>
-</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zorroki.me/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6ysa06c0000v4v0b09m9tyc" class="article-share-link">Share</a>
+      <a data-url="http://zorroki.me/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6ysdokk0000rkv0h1tafk9j" class="article-share-link">Share</a>
       
       
     </footer>
