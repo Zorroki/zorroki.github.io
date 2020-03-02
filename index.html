@@ -64,6 +64,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Tomcat与Servlet3.0+" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/02/Tomcat%E4%B8%8EServlet3.0+/" class="article-date">
+  <time datetime="2020-03-02T05:16:26.579Z" itemprop="datePublished">2020-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/02/Tomcat%E4%B8%8EServlet3.0+/">Tomcat与Servlet3.0+</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p>Catalina 是tomcat的servlet容器，实现了servlet和jsp规范。</p>
+<p>Coyote 是tomcat的web server，负责监听请求和响应。</p>
+<p>CATALINA_HOME: tomcat所在目录</p>
+<p>CATALINA_BASE: 当前使用配置所在目录</p>
+<p>在idea中运行tomcat，idea并不会直接把编译后的项目部署到tomcat的webapps文件夹下，而是：</p>
+<ol>
+<li>在<code>${user.home}/.IntelliJIdea/system/tomcat</code>下为每一个被部署的<code>artifact</code>创建一个名为<code>Unnamed_&lt;项目名称&gt;</code>的文件夹</li>
+<li>复制tomcat目录下的配置文件到该目录下</li>
+<li>设置配置文件里的<code>docBase</code>参数指向编译后的输出文件夹或war （配置文件路径：conf/Catalina/localhost）</li>
+<li>启动tomcat，设置参数<code>CATALINA_BASE</code>=<code>${user.home}/.IntelliJIdea/system/tomcat/Unnamed_&lt;项目名称&gt;</code></li>
+</ol>
+<h2 id="Servlet-3-0"><a href="#Servlet-3-0" class="headerlink" title="Servlet 3.0+"></a>Servlet 3.0+</h2><p>Spring <code>WebApplicationInitializer</code>提供了在Servlet 3.0+容器里编程式的配置Spring <code>DispatcherServlet</code> 和 <code>ContextLoaderListener</code>的方式，实现了<code>WebApplicationInitializer</code>接口的类会在Servlet容器启动阶段被调用</p>
+<p>原理是：</p>
+<p>​    Servlet 3.0新增了一个接口<code>ServletContainerInitializer</code>，接口实现类会在容器启动阶段被调用和传入一个<code>ServletContext</code>，从而实现编程式的注册(Servlet，Listener)，根据Servlet规范,必须在jar包里的META-INF/services/javax.servlet.ServletContainerInitializer文件里声明实现类。Spring 的<code>SpringServletContainerInitializer</code>实现了该接口,并在<code>spring-web*.jar</code>下声明。</p>
+<p>​    <code>SpringServletContainerInitializer</code>类带有注解<code>@HandlerTypes(WebApplicationInitializer.class)</code>,这意味着Servlet容器会扫描寻找实现了<code>WebApplicationInitializer</code>接口的实现类，在调用<code>onStartup</code>方法时和<code>ServletContext</code>一起传入。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zorroki.me/2020/03/02/Tomcat%E4%B8%8EServlet3.0+/" data-id="ck7a0jiqw0001j0v02ylnd1g3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-使用Github Page + Hexo搭建静态个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
@@ -142,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zorroki.me/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6ysdokk0000rkv0h1tafk9j" class="article-share-link">Share</a>
+      <a data-url="http://zorroki.me/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck7a0jiq60000j0v0e3jaeg8r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,7 +221,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
     </div>
   </div>
 
@@ -181,6 +232,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/02/Tomcat%E4%B8%8EServlet3.0+/">Tomcat与Servlet3.0+</a>
+          </li>
         
           <li>
             <a href="/2020/02/23/%E4%BD%BF%E7%94%A8Github%20Page%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">使用Github Page + Hexo搭建静态个人博客</a>
